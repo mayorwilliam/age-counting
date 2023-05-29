@@ -26,7 +26,7 @@ const performAgeCounting = async (req = request, res = response) => {
     // Calculate SHA1 hash of the file
     const sha1hash = calculateSHA1(output);
 
-    res.status(200).json({ sha1hash });
+    res.status(200).json({ sha1hash , filteredItems});
   } catch (error) {
     console.error("Error:", error.message);
     res.status(500).json({ error: "An error occurred" });
